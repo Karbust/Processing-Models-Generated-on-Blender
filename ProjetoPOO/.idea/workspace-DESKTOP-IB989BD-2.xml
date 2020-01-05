@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ProjetoPOO" targetName="ProjetoPOO" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-static-libgcc -static-libstdc++" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9768f68e-e68a-4793-9fc3-d32fd87b3cfa" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1SvG2FZFtSWLW83cy2g2xzwo6LE" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9768f68e-e68a-4793-9fc3-d32fd87b3cfa" name="Default Changelist" comment="" />
+      <created>1572436447007</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572436447007</updated>
+      <workItem from="1572436450140" duration="4415000" />
+      <workItem from="1572651225975" duration="381000" />
+      <workItem from="1572730855076" duration="21000" />
+      <workItem from="1572874425433" duration="6000" />
+      <workItem from="1572876439144" duration="291000" />
+      <workItem from="1572876843705" duration="33000" />
+      <workItem from="1572877191437" duration="23000" />
+      <workItem from="1572877235595" duration="26000" />
+      <workItem from="1572877297564" duration="204000" />
+      <workItem from="1572877679857" duration="3875000" />
+      <workItem from="1572899751602" duration="2000" />
+      <workItem from="1572962728865" duration="5952000" />
+      <workItem from="1572970408410" duration="312000" />
+      <workItem from="1572970824026" duration="1842000" />
+      <workItem from="1573481195685" duration="5082000" />
+      <workItem from="1573569115300" duration="3730000" />
+      <workItem from="1573579164539" duration="16907000" />
+      <workItem from="1573655874659" duration="3330000" />
+      <workItem from="1573681371453" duration="2232000" />
+      <workItem from="1573730357769" duration="1683000" />
+      <workItem from="1573732386774" duration="1831000" />
+      <workItem from="1574085632272" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

@@ -28,28 +28,23 @@ private:
     float area = 0.0f;
     Face *FaceMaiorArea, *FaceMaiorCurvatura;
     unsigned int Memoria;
-
-    void AddValueVertices(float VertexX, float VertexY, float VertexZ) {
-        Vertices.push_back(new Vertice(VertexX, VertexY, VertexZ));
-    }
 public:
-    explicit Modelo(const string &fich);
-    ~Modelo();
-    string ReturnNome() { return Nome; }
-    vector<Vertice *> ReturnVertices() { return Vertices; }
-    vector<Face *> ReturnFaces() { return Faces; }
-    vector<Aresta *> ReturnArestas() { return Arestas; }
-    size_t ReturnVerticesCount() { return m_VerticesCount; }
-    size_t ReturnFacesCount() { return m_FacesCount; }
-    size_t ReturnArestasCount() { return m_ArestasCount; }
-    float ReturnArea() { return area; }
-    Face *ReturnFaceMaiorArea() { return FaceMaiorArea; }
-    Face *ReturnFaceMaiorCurvatura() { return FaceMaiorCurvatura; }
-    unsigned int ReturnMemoria() { return Memoria; }
-    void DisplayVertices();
-    void DisplayFace();
-    void DisplayArestas();
-    void DisplayAresta(Aresta *A);
+    explicit Modelo(const string &fich); //Construtor
+    ~Modelo(); //Destrutor
+    string ReturnNome() { return Nome; } //Devolve o Nome do ficheiro
+    vector<Vertice *> ReturnVertices() { return Vertices; } //Devolve o vetor dos vértices
+    vector<Face *> ReturnFaces() { return Faces; } //Devolve o vetor das faces
+    vector<Aresta *> ReturnArestas() { return Arestas; } //Devolve o vetor das arestas
+    size_t ReturnVerticesCount() { return m_VerticesCount; } //Devolve a contagem de vértices
+    size_t ReturnFacesCount() { return m_FacesCount; } //Devolve a contagem de faces
+    size_t ReturnArestasCount() { return m_ArestasCount; } //Devolve a contagem de arestas
+    float ReturnArea() { return area; } //Devolve a área do modelo
+    Face *ReturnFaceMaiorArea() { return FaceMaiorArea; } //Devolve a face com maior área
+    Face *ReturnFaceMaiorCurvatura() { return FaceMaiorCurvatura; } //Devolve a Face com maior curvatura
+    unsigned int ReturnMemoria() { return Memoria; } //Devolve a memória ocupada pelo modelo
+    void DisplayVertices(); //Mostra os vértices
+    void DisplayFace(); //Mostra as faces
+    void DisplayArestas(); //Mostra as arestas
 };
 
 

@@ -24,11 +24,11 @@ class XMLWriter {
     };
 
 public:
-    explicit XMLWriter(string _ficheiro);
-    ~XMLWriter();
-    void WriteElementString(string el, string valor);
-    void WriteStartElement(string el);
-    void WriteEndElement();
+    explicit XMLWriter(string _ficheiro); //Construtor
+    ~XMLWriter(); //Destrutor
+    void WriteElementString(string el, string valor); //Abre um elemento
+    void WriteStartElement(string el); //Escreve os dados do elemento
+    void WriteEndElement(); //Fecha o último elemento em aberto
 };
 
 

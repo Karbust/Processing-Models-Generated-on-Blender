@@ -19,7 +19,7 @@ Modelo::Modelo(const string &fich){
         if (line[0] == 'v'){
             istringstream iss(line);
             iss >> v >> VertexX >> VertexY >> VertexZ;
-            AddValueVertices(VertexX, VertexY, VertexZ);
+            Vertices.push_back(new Vertice(VertexX, VertexY, VertexZ));
         }
         else if(line[0] == 'f'){
             istringstream iss(line);
@@ -33,26 +33,17 @@ Modelo::Modelo(const string &fich){
 
             temp.clear();
 
-            vector<Aresta *> A;
-
             for(size_t j = 0; j < novaFace->ReturnVertices().size(); j++){
                 size_t z = j + 1;
                 if (z == (novaFace->ReturnVertices().size()))
                     z = 0;
                 auto *aresta = new Aresta(novaFace->ReturnVertices()[j], novaFace->ReturnVertices()[z]);
 
-                auto check = Utils::CompararArestas(aresta, Arestas);
-
-                if (!check){
+                if (!Utils::CompararArestas(aresta, Arestas))
                     Arestas.push_back(aresta);
-                    A.push_back(aresta);
-                }else{
+                else
                     delete aresta;
-                    A.push_back(check);
-                }
             }
-
-            novaFace->SetArestas(A);
             novaFace->CalcularArea();
             novaFace->CalcularFaceNormal();
 
@@ -116,8 +107,6 @@ Modelo::~Modelo(){
         delete Face->ReturnNormal();
         delete Face;
     }
-    /*for(auto & ArestaFace : ArestasFace)
-        delete ArestaFace;*/
 
     Vertices.clear();
     Faces.clear();
@@ -148,9 +137,5 @@ void Modelo::DisplayArestas() {
     cout << "Arestas: " << endl;
     for (auto & Aresta : Arestas)
         cout << fixed << "[(" << Aresta->ReturnVertex1()->ReturnVX() << ", " << Aresta->ReturnVertex1()->ReturnVY() << ", " << Aresta->ReturnVertex1()->ReturnVZ() << "); (" << Aresta->ReturnVertex2()->ReturnVX() << ", " << Aresta->ReturnVertex2()->ReturnVY() << ", " << Aresta->ReturnVertex2()->ReturnVZ() << ")]" << /*"\tComprimento: " << Aresta->ReturnComprimento() <<*/ endl;
-}
-
-void Modelo::DisplayAresta(Aresta *A) {
-    cout << fixed << "[(" << A->ReturnVertex1()->ReturnVX() << ", " << A->ReturnVertex1()->ReturnVY() << ", " << A->ReturnVertex1()->ReturnVZ() << "); (" << A->ReturnVertex2()->ReturnVX() << ", " << A->ReturnVertex2()->ReturnVY() << ", " << A->ReturnVertex2()->ReturnVZ() << ")]" << endl;
 }
 

@@ -18,7 +18,6 @@ private:
     int FaceID{};
     vector<int> VerticeID;
     vector<Vertice *> Vertices;
-    vector<Aresta *> Arestas;
     Vertice *Normal;
     float area = 0.0f, curvatura = 0.0f, T = 0.0f, D = 0.0f, W1 = 0.0f, W2 = 0.0f, W3 = 0.0f;
     static Vertice *CalcularCoordVetor(Vertice *V1, Vertice *V2);
@@ -28,30 +27,26 @@ private:
         bool operator()(Face* lhs, Face* rhs) const { return lhs->FaceID < rhs->FaceID; }
     };
 public:
-    void CalcularArea();
-    void CalcularFaceNormal();
-    void CalcularD();
-    bool Intersecao(float Ax, float Ay, float Az, float Vx, float Vy, float Vz);
-    Vertice *CalcularIntersecao(float Ax, float Ay, float Az, float Vx, float Vy, float Vz);
-    bool VerificaPontoNoPlano(Vertice *V){ return fabs(W1 * V->ReturnVX() + W2 * V->ReturnVY() + W3 * V->ReturnVZ() + D) <= TOL; };
-    bool EstaNaFace(Vertice *V);
-    vector<Face *> DeterminarFacesVizinhas(const vector<Face *>& Faces) const;
-    void SetCurvatura(float curv) { curvatura = curv; };
+    void CalcularArea(); //Calcula a área da face
+    void CalcularFaceNormal(); //Calcula a normal da face (normalizada)
+    void CalcularD(); //Calcula o D da face
+    bool Intersecao(float Ax, float Ay, float Az, float Vx, float Vy, float Vz); //Calcula a interseção
+    Vertice *CalcularIntersecao(float Ax, float Ay, float Az, float Vx, float Vy, float Vz); //Devolve o vértice onde faz interseção na face
+    bool VerificaPontoNoPlano(Vertice *V){ return fabs(W1 * V->ReturnVX() + W2 * V->ReturnVY() + W3 * V->ReturnVZ() + D) <= TOL; }; //Verifica se o ponto de interseção se encontra no plano
+    bool EstaNaFace(Vertice *V); //Verifica se o ponto está na face
+    vector<Face *> DeterminarFacesVizinhas(const vector<Face *>& Faces) const; //Determina as faces vizinhas (pelos vértices)
+    void SetCurvatura(float curv) { curvatura = curv; }; //Preenche o valor da curvatura
     void Add(int fID, int vID, Vertice *V){
         FaceID = fID;
         VerticeID.push_back(vID);
         Vertices.push_back(V);
-    }
-    int ReturnfID() { return FaceID; };
-    vector<int> ReturnvID() { return VerticeID; };
-    vector<Vertice *> ReturnVertices() { return Vertices; };
-    vector<Aresta *> ReturnArestas() { return Arestas; };
-    void SetArestas(vector<Aresta *> A){
-        Arestas = A;
-    };
-    float ReturnArea() { return area; };
-    float ReturnCurvatura() { return curvatura; };
-    Vertice *ReturnNormal() { return Normal; };
+    } //Preenche o valor do ID da face e adiciona os ID's dos vértices e os vértices aos respetivos vetores.
+    int ReturnfID() { return FaceID; }; //Devolve o ID da Face
+    vector<int> ReturnvID() { return VerticeID; }; //Deolve os ID's dos vértices
+    vector<Vertice *> ReturnVertices() { return Vertices; }; //Devolve os vértices
+    float ReturnArea() { return area; }; //Devolve a área da face
+    float ReturnCurvatura() { return curvatura; }; //Devolve a curvatura da face
+    Vertice *ReturnNormal() { return Normal; }; //Devolve a normal da face
 };
 
 

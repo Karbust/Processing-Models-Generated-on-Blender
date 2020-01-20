@@ -5,13 +5,15 @@
 #include "SGestao.h"
 
 int main(int argc, char *argv[]) {
+    //Definir a codificação para UTF-8 para mostrar símbols e carateres especiais
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    streamsize ss = cout.precision();
+    streamsize ss = cout.precision(); //Guardar a precisão (número de casas decimais) atual
 
-    clock_t begin = clock();
+    clock_t begin = clock(); //Iniciar o contador
 
 #ifdef DEBUG_MODE
+    //Modo de compilação Debug, testa a memória
     for (int i = 1; i < argc; ++i) {
         while(true){
             cout << "--------------------------------------" << endl;
@@ -43,7 +45,7 @@ int main(int argc, char *argv[]) {
 
             cout << endl;
 
-            //cout << "NumInterseções: " << SG->NumInterseccoes(new Vertice(112, 209, 319), new Vertice(121, 219, 311)) << endl;
+            cout << "NumInterseções: " << SG->NumInterseccoes(Vertice(112, 209, 319), Vertice(121, 219, 311)) << endl;
 
             cout << endl;
 
@@ -59,6 +61,7 @@ int main(int argc, char *argv[]) {
         }
     }
 #else
+    //Modo de compilação Release
     auto *SG = new SGestao();
     for (int i = 1; i < argc; ++i) {
         cout << "--------------------------------------" << endl;
@@ -92,7 +95,7 @@ int main(int argc, char *argv[]) {
 
         cout << endl;
 
-        //cout << "NumInterseções: " << SG->NumInterseccoes(new Vertice(112, 209, 319), new Vertice(121, 219, 311)) << endl;
+        cout << "NumInterseções: " << SG->NumInterseccoes(Vertice(112, 209, 319), Vertice(121, 219, 311)) << endl;
 
         cout << endl;
 
@@ -108,8 +111,8 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
-    clock_t end = clock();
-    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    clock_t end = clock(); //Parar o contador
+    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC; //Calcular, em segundos, quanto tempo passou desde o início do contador até à sua paragem
 
     cout << endl;
 

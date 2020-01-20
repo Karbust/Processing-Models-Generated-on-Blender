@@ -151,14 +151,14 @@ Modelo *SGestao::ModeloMaisMemoria() {
     return temp;
 }
 
-int SGestao::NumInterseccoes(Vertice *A, Vertice *B) {
-    float Vx = B->ReturnVX() - A->ReturnVX();
-    float Vy = B->ReturnVY() - A->ReturnVY();
-    float Vz = B->ReturnVZ() - A->ReturnVZ();
+int SGestao::NumInterseccoes(Vertice A, Vertice B) {
+    float Vx = B.ReturnVX() - A.ReturnVX();
+    float Vy = B.ReturnVY() - A.ReturnVY();
+    float Vz = B.ReturnVZ() - A.ReturnVZ();
 
-    float Ax = A->ReturnVX();
-    float Ay = A->ReturnVY();
-    float Az = A->ReturnVZ();
+    float Ax = A.ReturnVX();
+    float Ay = A.ReturnVY();
+    float Az = A.ReturnVZ();
 
     int contador = 0;
 

@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="ProjetoPOO" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="cubo.obj" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjetoPOO" TARGET_NAME="ProjetoPOO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjetoPOO" RUN_TARGET_NAME="ProjetoPOO">
+  <configuration default="false" name="ProjetoPOO" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="cubox.obj" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjetoPOO" TARGET_NAME="ProjetoPOO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjetoPOO" RUN_TARGET_NAME="ProjetoPOO">
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
     </method>

@@ -21,7 +21,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
     <favorites_list name="ProjetoPOO" />
   </component>
@@ -153,6 +153,8 @@
       <workItem from="1579198865717" duration="14386000" />
       <workItem from="1579259064942" duration="13320000" />
       <workItem from="1579528620994" duration="783000" />
+      <workItem from="1579529457075" duration="234000" />
+      <workItem from="1579542027315" duration="4585000" />
     </task>
     <servers />
   </component>
@@ -164,15 +166,15 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="184" key="#Inspections/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579215982882" />
-    <state x="422" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579285935912">
+    <state x="422" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579542106295">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-1092" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1578003478833" />
-    <state x="422" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579285935912" />
-    <state x="742" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1578159158086">
+    <state x="422" y="216" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579542106295" />
+    <state x="742" y="242" key="#com.intellij.ide.util.MemberChooser" timestamp="1579543083330">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="742" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1578159158086" />
+    <state x="742" y="242" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579543083330" />
     <state x="729" y="355" key="#com.intellij.tools.ToolEditorDialog" timestamp="1579283129234">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -185,26 +187,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1288" y="353" key="FileChooserDialogImpl/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1577990463139" />
-    <state width="1921" height="283" key="GridCell.Tab.0.bottom" timestamp="1579529404502">
+    <state width="1921" height="283" key="GridCell.Tab.0.bottom" timestamp="1579552211741">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1367" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1579202598658" />
-    <state width="1921" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579529404502" />
-    <state width="1921" height="283" key="GridCell.Tab.0.center" timestamp="1579529404502">
+    <state width="1921" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579552211741" />
+    <state width="1921" height="283" key="GridCell.Tab.0.center" timestamp="1579552211741">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1367" height="195" key="GridCell.Tab.0.center/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1579202598658" />
-    <state width="1921" height="283" key="GridCell.Tab.0.center/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579529404502" />
-    <state width="1921" height="283" key="GridCell.Tab.0.left" timestamp="1579529404501">
+    <state width="1921" height="283" key="GridCell.Tab.0.center/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579552211741" />
+    <state width="1921" height="283" key="GridCell.Tab.0.left" timestamp="1579552211741">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1367" height="195" key="GridCell.Tab.0.left/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1579202598658" />
-    <state width="1921" height="283" key="GridCell.Tab.0.left/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579529404501" />
-    <state width="1921" height="283" key="GridCell.Tab.0.right" timestamp="1579529404502">
+    <state width="1921" height="283" key="GridCell.Tab.0.left/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579552211741" />
+    <state width="1921" height="283" key="GridCell.Tab.0.right" timestamp="1579552211741">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1367" height="195" key="GridCell.Tab.0.right/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1579202598658" />
-    <state width="1921" height="283" key="GridCell.Tab.0.right/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579529404502" />
+    <state width="1921" height="283" key="GridCell.Tab.0.right/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579552211741" />
     <state width="1921" height="400" key="GridCell.Tab.1.bottom" timestamp="1578184701400">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -225,11 +227,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579283445237" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1579529458302">
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1579542082032">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-899" y="255" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1578003473695" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579529458302" />
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579542082032" />
     <state x="855" y="260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1579283168807">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -238,10 +240,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="521" y="262" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1578183375896" />
-    <state x="953" y="289" width="737" height="536" key="find.popup" timestamp="1579287231370">
+    <state x="953" y="289" width="737" height="536" key="find.popup" timestamp="1579543256697">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="953" y="289" width="737" height="536" key="find.popup/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579287231370" />
+    <state x="953" y="289" width="737" height="536" key="find.popup/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579543256697" />
     <state x="701" y="168" key="refactoring.ChangeSignatureDialog" timestamp="1579287557835">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

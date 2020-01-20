@@ -25,6 +25,9 @@ private:
     size_t m_VerticesCount = 0;
     size_t m_FacesCount = 0;
     size_t m_ArestasCount = 0;
+    float area = 0.0f;
+    Face *FaceMaiorArea, *FaceMaiorCurvatura;
+    unsigned int Memoria;
 
     void AddValueVertices(float VertexX, float VertexY, float VertexZ) {
         Vertices.push_back(new Vertice(VertexX, VertexY, VertexZ));
@@ -32,17 +35,21 @@ private:
 public:
     explicit Modelo(const string &fich);
     ~Modelo();
+    string ReturnNome() { return Nome; }
+    vector<Vertice *> ReturnVertices() { return Vertices; }
+    vector<Face *> ReturnFaces() { return Faces; }
+    vector<Aresta *> ReturnArestas() { return Arestas; }
+    size_t ReturnVerticesCount() { return m_VerticesCount; }
+    size_t ReturnFacesCount() { return m_FacesCount; }
+    size_t ReturnArestasCount() { return m_ArestasCount; }
+    float ReturnArea() { return area; }
+    Face *ReturnFaceMaiorArea() { return FaceMaiorArea; }
+    Face *ReturnFaceMaiorCurvatura() { return FaceMaiorCurvatura; }
+    unsigned int ReturnMemoria() { return Memoria; }
     void DisplayVertices();
     void DisplayFace();
     void DisplayArestas();
     void DisplayAresta(Aresta *A);
-    string ReturnNome() { return Nome; };
-    vector<Vertice *> ReturnVertices() { return Vertices; };
-    vector<Face *> ReturnFaces() { return Faces; };
-    vector<Aresta *> ReturnArestas() { return Arestas; };
-    size_t ReturnVerticesCount() { return m_VerticesCount; };
-    size_t ReturnFacesCount() { return m_FacesCount; };
-    size_t ReturnArestasCount() { return m_ArestasCount; };
 };
 
 

@@ -4,16 +4,6 @@
 
 #include "Utils.h"
 
-/*float Utils::ComprimentoAresta(Vertice *V1, Vertice *V2) {
-    return sqrt(pow(V2->ReturnVX() - V1->ReturnVX(), 2) +
-    pow(V2->ReturnVY() - V1->ReturnVY(), 2) +
-    pow(V2->ReturnVZ() - V1->ReturnVZ(), 2));
-}*/
-
-float Utils::ProdutoInterno(float r1, float r2, float r3, float r4, float r5, float r6){
-    return r1 * r4 + r2 * r5 + r4 * r6;
-}
-
 bool Utils::CompararVertice(Vertice * V1, Vertice * V2) {
     return V1->ReturnVX() == V2->ReturnVX() && V1->ReturnVY() == V2->ReturnVY() && V1->ReturnVZ() == V2->ReturnVZ();
 }

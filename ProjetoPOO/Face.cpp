@@ -4,8 +4,6 @@
 #include <iostream>
 #include "Face.h"
 
-Face::Face() = default;
-
 Vertice * Face::CalcularCoordVetor(Vertice *V1, Vertice *V2){
     float dx = V2->ReturnVX() - V1->ReturnVX();
     float dy = V2->ReturnVY() - V1->ReturnVY();
@@ -155,73 +153,14 @@ bool Face::EstaNaFace(Vertice *V){
     return ((p1 > 0) && (p2 > 0)) || ((p1 < 0) && (p2 < 0));
 }
 
-/*vector<Face *> Face::DeterminarFacesVizinhas(vector<Face *> Faces){
-    vector<Face *> Lista = {};
-    bool flag = false;
-    //cout << "\n" << endl;
-    for (size_t x = 0; x < ReturnVertices().size(); x++)
-        for (size_t i = 0; i < Faces.size(); i++)
-            for (size_t j = 0; j < Faces[i]->ReturnVertices().size(); j++){
-                if (Utils::CompararVertice(Faces[i]->ReturnVertices()[j], ReturnVertices()[x])) {
-                    for (size_t v = 0; v < Lista.size(); v++)
-                        if(Lista[v]->FaceID==Faces[i]->FaceID)
-                            flag=true;
-                    if(!flag)
-                        Lista.push_back(Faces[i]);
-                }
+vector<Face *> Face::DeterminarFacesVizinhas(const vector<Face *>& Faces) const {
+    set<Face *, LessByFaceId> Lista;
 
-            }
+    for (const auto& V1 : Vertices)
+        for (const auto& Face : Faces)
+            for (const auto& V2 : Face->ReturnVertices())
+                if (Utils::CompararVertice(V2, V1) && Face->ReturnfID() != FaceID)
+                    Lista.insert(Face);
 
-    return Lista;
-}*/
-
-vector<Face *> Face::DeterminarFacesVizinhas(const vector<Face *>& Faces) {
-    vector<Face *> Lista = {};
-    bool flag = false;
-    vector<Aresta *> tmp;
-
-    //cout << "Arestas.size() = " << Arestas.size() << endl;
-
-    for(size_t x = 0; x < Faces.size(); x++)
-        cout << "Faces[x]->Arestas.size() = " << Faces[x]->Arestas.size() << endl;
-
-    /*for(size_t x = 0; x < ArestasFace.size(); x++)
-        for(size_t i = 0; i < ArestasFace[x]->ReturnAresta().size(); i++)
-            if(ArestasFace[x]->ReturnFace() == FaceID){
-                for (size_t v = 0; v < tmp.size(); v++)
-                    if(Utils::CompararAresta(ArestasFace[x]->ReturnAresta()[i], tmp[v]))
-                        flag=true;
-                if(!flag)
-                    tmp.push_back(ArestasFace[x]->ReturnAresta()[i]);
-            }*/
-
-    //cout << "tmp.size() = " << tmp.size() << endl;
-
-    /*for(size_t x = 0; x < tmp.size(); x++){
-        cout << fixed << "[(" << tmp[x]->ReturnVertex1()->ReturnVX() << ", " << tmp[x]->ReturnVertex1()->ReturnVY() << ", "
-        << tmp[x]->ReturnVertex1()->ReturnVZ() << "); (" << tmp[x]->ReturnVertex2()->ReturnVX() << ", " << tmp[x]->ReturnVertex2()->ReturnVY() << ", "
-        << tmp[x]->ReturnVertex2()->ReturnVZ() << ")]" << endl;
-    }*/
-
-    /*for(size_t x = 0; x < ArestasFace.size(); x++)
-        for(size_t j = 0; j < ArestasFace[x]->ReturnAresta().size(); j++)
-            for(size_t i = 0; i < tmp.size(); i++)
-                if(Utils::CompararAresta(ArestasFace[x]->ReturnAresta()[j], tmp[i]))
-                    Lista.push_back(Faces[ArestasFace[x]->ReturnFace()-1]);*/
-
-    /*for(size_t x = 0; x < Arestas.size(); x++){
-        for(size_t i = 0; i < Arestas[x]->ReturnFace(); i++){
-            if(!Utils::CompararAresta(Arestas[x]->ReturnAresta(), Arestas[i]->ReturnAresta()))
-                cout << "Teste1" << endl;
-        }
-    }*/
-    /*for(size_t x = 0; x < Faces.size(); x++){
-        for(size_t i = 0; i < Arestas.size(); i++){
-            if()
-        }
-    }*/
-
-    cout << "Lista.size() = " << Lista.size() << endl;
-
-    return Lista;
+    return {Lista.begin(), Lista.end()};
 }

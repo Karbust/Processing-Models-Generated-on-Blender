@@ -6,6 +6,7 @@
 #define PROJETOPOO_FACE_H
 #include <cmath>
 #include <vector>
+#include <set>
 #include "Aresta.h"
 #include "Vertice.h"
 #include "Utils.h"
@@ -21,10 +22,12 @@ private:
     Vertice *Normal;
     float area = 0.0f, curvatura = 0.0f, T = 0.0f, D = 0.0f, W1 = 0.0f, W2 = 0.0f, W3 = 0.0f;
     static Vertice *CalcularCoordVetor(Vertice *V1, Vertice *V2);
-public:
-    enum TipoCalculo {AREA, D_VALUE};
-    Face();
 
+    //LHS - Left Hand side || RHS - Right Hand side
+    struct LessByFaceId{
+        bool operator()(Face* lhs, Face* rhs) const { return lhs->FaceID < rhs->FaceID; }
+    };
+public:
     void CalcularArea();
     void CalcularFaceNormal();
     void CalcularD();
@@ -32,8 +35,7 @@ public:
     Vertice *CalcularIntersecao(float Ax, float Ay, float Az, float Vx, float Vy, float Vz);
     bool VerificaPontoNoPlano(Vertice *V){ return fabs(W1 * V->ReturnVX() + W2 * V->ReturnVY() + W3 * V->ReturnVZ() + D) <= TOL; };
     bool EstaNaFace(Vertice *V);
-    //vector<Face *> DeterminarFacesVizinhas(vector<Face *> Faces);
-    vector<Face *> DeterminarFacesVizinhas(const vector<Face *>& Faces);
+    vector<Face *> DeterminarFacesVizinhas(const vector<Face *>& Faces) const;
     void SetCurvatura(float curv) { curvatura = curv; };
     void Add(int fID, int vID, Vertice *V){
         FaceID = fID;

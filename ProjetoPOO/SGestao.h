@@ -31,12 +31,12 @@ public:
         ModeloSG = modelo;
         ListaModelos.push_back(modelo);
     }
-    Modelo *ReturnModelo() {return ModeloSG;};
+    Modelo *ReturnModelo() { return ModeloSG; }
     int Contar(Tipo T);
     double AreaModelo(const string &fich);
     bool Envolvente(const string &fich, Vertice &Pmin, Vertice &Pmax);
     unsigned int Memoria();
-    Modelo *Memoria(const string &fich);
+    unsigned int Memoria(const string &fich);
     Modelo *ModeloMaisMemoria();
     int NumInterseccoes(Vertice *A, Vertice *B);
     bool RemoverModelo(const string &fich);

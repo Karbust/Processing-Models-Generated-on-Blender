@@ -5,8 +5,6 @@
 #ifndef PROJETOPOO_VERTICE_H
 #define PROJETOPOO_VERTICE_H
 
-#include <cmath>
-
 class Vertice {
 private:
     float VerticeX, VerticeY, VerticeZ;

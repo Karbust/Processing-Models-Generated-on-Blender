@@ -33,12 +33,10 @@ Modelo::Modelo(const string &fich){
 
             temp.clear();
 
-            //auto *AF = new ArestasFaces();
-
             vector<Aresta *> A;
 
-            for(int j = 0; j < novaFace->ReturnVertices().size(); j++){
-                int z = j + 1;
+            for(size_t j = 0; j < novaFace->ReturnVertices().size(); j++){
+                size_t z = j + 1;
                 if (z == (novaFace->ReturnVertices().size()))
                     z = 0;
                 auto *aresta = new Aresta(novaFace->ReturnVertices()[j], novaFace->ReturnVertices()[z]);
@@ -54,18 +52,43 @@ Modelo::Modelo(const string &fich){
                 }
             }
 
-            /*AF->Add(A, w);
-
-            ArestasFace.push_back(AF);*/
-
             novaFace->SetArestas(A);
-
             novaFace->CalcularArea();
             novaFace->CalcularFaceNormal();
 
             Faces.push_back(novaFace);
+            area += novaFace->ReturnArea();
 
             w++;
+        }
+    }
+
+    float temp_area = 0.0f;
+
+    for(auto & Face : Faces){
+        if(Face->ReturnArea() > temp_area){
+            temp_area = Face->ReturnArea();
+            FaceMaiorArea = Face;
+        }
+    }
+
+    for(auto & F : Faces){
+        vector<Face *> ListaFacesVizinhas = F->DeterminarFacesVizinhas(Faces);
+
+        float normal = 0.0f;
+
+        for(auto & LFV : ListaFacesVizinhas)
+            normal += F->ReturnNormal()->ProdInterno(LFV->ReturnNormal());
+
+        F->SetCurvatura(acos(normal)*180/M_PI);
+    }
+
+    float temp_curv = 0.0f;
+
+    for(auto & Face : Faces){
+        if(Face->ReturnCurvatura() > temp_curv){
+            temp_curv = Face->ReturnCurvatura();
+            FaceMaiorCurvatura = Face;
         }
     }
 
@@ -73,6 +96,14 @@ Modelo::Modelo(const string &fich){
     m_VerticesCount = ReturnVertices().size();
     m_FacesCount = ReturnFaces().size();
     m_ArestasCount = ReturnArestas().size();
+
+    Memoria = sizeof(string) * Nome.size() +
+              sizeof(vector<Vertice *>) + sizeof(Vertice) * Vertices.size() +
+              sizeof(vector<Face *>) + sizeof(Face) * Faces.size() +
+              sizeof(vector<Aresta *>) + sizeof(Aresta) * Arestas.size() +
+              sizeof(size_t) * m_VerticesCount +
+              sizeof(size_t) * m_FacesCount +
+              sizeof(size_t) * m_ArestasCount;
 }
 
 Modelo::~Modelo(){

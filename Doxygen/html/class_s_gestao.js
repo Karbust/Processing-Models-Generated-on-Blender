@@ -15,7 +15,7 @@ var class_s_gestao =
     [ "Memoria", "class_s_gestao.html#a8e2d8b50b0b6a92251d6ee66c1e0d67e", null ],
     [ "Memoria", "class_s_gestao.html#ac0185f49c8453a0d709eaa1497c29e2e", null ],
     [ "ModeloMaisMemoria", "class_s_gestao.html#a9621641197f31c8e2b8a677ca0b7d891", null ],
-    [ "NumInterseccoes", "class_s_gestao.html#ad099b6fd36b9b005ca408f1036ba773b", null ],
+    [ "NumInterseccoes", "class_s_gestao.html#a8395eedd5ef70e2be9d411f1325c6911", null ],
     [ "RemoverModelo", "class_s_gestao.html#aea1dcce123cb7df32177a29b5c0472d6", null ],
     [ "ReturnModelo", "class_s_gestao.html#afa1d97d85deed1bd3c94505c7c8fd941", null ]
 ];

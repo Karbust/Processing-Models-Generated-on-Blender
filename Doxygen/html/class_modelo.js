@@ -2,7 +2,6 @@ var class_modelo =
 [
     [ "Modelo", "class_modelo.html#af4c627646fc784c99e993f3d7a7a1c2f", null ],
     [ "~Modelo", "class_modelo.html#ad8d2f3bd61654d2dd486a8e24c6149fc", null ],
-    [ "DisplayAresta", "class_modelo.html#a9e38ae3474d7b700e40442760e3ce36e", null ],
     [ "DisplayArestas", "class_modelo.html#aa7163777fa5ea25a995026953bfe2490", null ],
     [ "DisplayFace", "class_modelo.html#a2dc37adc81355038ad125e7be015ba77", null ],
     [ "DisplayVertices", "class_modelo.html#a243556d9eec8fb5726a04db4c6f10fd4", null ],

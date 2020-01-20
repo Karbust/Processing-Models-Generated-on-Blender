@@ -115,39 +115,31 @@ $(document).ready(function(){initNavTree('_modelo_8h_source.html',''); initResiz
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> area = 0.0f;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_face.html">Face</a> *FaceMaiorArea, *FaceMaiorCurvatura;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Memoria;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> AddValueVertices(<span class="keywordtype">float</span> VertexX, <span class="keywordtype">float</span> VertexY, <span class="keywordtype">float</span> VertexZ) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        Vertices.push_back(<span class="keyword">new</span> <a class="code" href="class_vertice.html">Vertice</a>(VertexX, VertexY, VertexZ));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_modelo.html">Modelo</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fich);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ~<a class="code" href="class_modelo.html">Modelo</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">string</span> ReturnNome() { <span class="keywordflow">return</span> Nome; }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    vector&lt;Vertice *&gt; ReturnVertices() { <span class="keywordflow">return</span> Vertices; }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    vector&lt;Face *&gt; ReturnFaces() { <span class="keywordflow">return</span> Faces; }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    vector&lt;Aresta *&gt; ReturnArestas() { <span class="keywordflow">return</span> Arestas; }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">size_t</span> ReturnVerticesCount() { <span class="keywordflow">return</span> m_VerticesCount; }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">size_t</span> ReturnFacesCount() { <span class="keywordflow">return</span> m_FacesCount; }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">size_t</span> ReturnArestasCount() { <span class="keywordflow">return</span> m_ArestasCount; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">float</span> ReturnArea() { <span class="keywordflow">return</span> area; }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_face.html">Face</a> *ReturnFaceMaiorArea() { <span class="keywordflow">return</span> FaceMaiorArea; }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_face.html">Face</a> *ReturnFaceMaiorCurvatura() { <span class="keywordflow">return</span> FaceMaiorCurvatura; }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ReturnMemoria() { <span class="keywordflow">return</span> Memoria; }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> DisplayVertices();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> DisplayFace();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> DisplayArestas();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> DisplayAresta(<a class="code" href="class_aresta.html">Aresta</a> *A);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif //PROJETOPOO_MODELO_H</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_modelo.html">Modelo</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fich); <span class="comment">//Construtor</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    ~<a class="code" href="class_modelo.html">Modelo</a>(); <span class="comment">//Destrutor</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">string</span> ReturnNome() { <span class="keywordflow">return</span> Nome; } <span class="comment">//Devolve o Nome do ficheiro</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    vector&lt;Vertice *&gt; ReturnVertices() { <span class="keywordflow">return</span> Vertices; } <span class="comment">//Devolve o vetor dos vértices</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    vector&lt;Face *&gt; ReturnFaces() { <span class="keywordflow">return</span> Faces; } <span class="comment">//Devolve o vetor das faces</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    vector&lt;Aresta *&gt; ReturnArestas() { <span class="keywordflow">return</span> Arestas; } <span class="comment">//Devolve o vetor das arestas</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">size_t</span> ReturnVerticesCount() { <span class="keywordflow">return</span> m_VerticesCount; } <span class="comment">//Devolve a contagem de vértices</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">size_t</span> ReturnFacesCount() { <span class="keywordflow">return</span> m_FacesCount; } <span class="comment">//Devolve a contagem de faces</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">size_t</span> ReturnArestasCount() { <span class="keywordflow">return</span> m_ArestasCount; } <span class="comment">//Devolve a contagem de arestas</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">float</span> ReturnArea() { <span class="keywordflow">return</span> area; } <span class="comment">//Devolve a área do modelo</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_face.html">Face</a> *ReturnFaceMaiorArea() { <span class="keywordflow">return</span> FaceMaiorArea; } <span class="comment">//Devolve a face com maior área</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_face.html">Face</a> *ReturnFaceMaiorCurvatura() { <span class="keywordflow">return</span> FaceMaiorCurvatura; } <span class="comment">//Devolve a Face com maior curvatura</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ReturnMemoria() { <span class="keywordflow">return</span> Memoria; } <span class="comment">//Devolve a memória ocupada pelo modelo</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> DisplayVertices(); <span class="comment">//Mostra os vértices</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> DisplayFace(); <span class="comment">//Mostra as faces</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> DisplayArestas(); <span class="comment">//Mostra as arestas</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif //PROJETOPOO_MODELO_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_face_html"><div class="ttname"><a href="class_face.html">Face</a></div><div class="ttdef"><b>Definition:</b> Face.h:16</div></div>
-<div class="ttc" id="aclass_vertice_html"><div class="ttname"><a href="class_vertice.html">Vertice</a></div><div class="ttdef"><b>Definition:</b> Vertice.h:8</div></div>
-<div class="ttc" id="aclass_modelo_html"><div class="ttname"><a href="class_modelo.html">Modelo</a></div><div class="ttdef"><b>Definition:</b> Modelo.h:19</div></div>
-<div class="ttc" id="aclass_aresta_html"><div class="ttname"><a href="class_aresta.html">Aresta</a></div><div class="ttdef"><b>Definition:</b> Aresta.h:9</div></div>
-<div class="ttc" id="aclass_s_gestao_html"><div class="ttname"><a href="class_s_gestao.html">SGestao</a></div><div class="ttdef"><b>Definition:</b> SGestao.h:19</div></div>
+<div class="ttc" id="aclass_face_html"><div class="ttname"><a href="class_face.html">Face</a></div><div class="ttdef"><b>Definition:</b> <a href="_face_8h_source.html#l00016">Face.h:16</a></div></div>
+<div class="ttc" id="aclass_modelo_html"><div class="ttname"><a href="class_modelo.html">Modelo</a></div><div class="ttdef"><b>Definition:</b> <a href="_modelo_8h_source.html#l00019">Modelo.h:19</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

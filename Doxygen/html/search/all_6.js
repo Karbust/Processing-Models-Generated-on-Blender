@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xmlwriter_7',['XMLWriter',['../class_x_m_l_writer.html',1,'']]]
+  ['xmlwriter_6',['XMLWriter',['../class_x_m_l_writer.html',1,'']]]
 ];

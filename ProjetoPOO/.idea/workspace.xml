@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9768f68e-e68a-4793-9fc3-d32fd87b3cfa" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +22,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
     <favorites_list name="ProjetoPOO" />
   </component>
@@ -40,6 +41,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected="CMake Application.ProjetoPOO">
     <configuration name="ProjetoPOO_All" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="Bethoven.obj cessna.obj cubo.obj horse.obj pyramid.obj tinker.obj tyra.obj" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ProjetoPOO" TARGET_NAME="ProjetoPOO" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ProjetoPOO" RUN_TARGET_NAME="ProjetoPOO">
       <method v="2">
@@ -55,18 +68,6 @@
       <item itemvalue="CMake Application.ProjetoPOO_All" />
       <item itemvalue="CMake Application.ProjetoPOO" />
     </list>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -157,6 +158,8 @@
       <workItem from="1579542027315" duration="4585000" />
       <workItem from="1579553988909" duration="1141000" />
       <workItem from="1579555378754" duration="335000" />
+      <workItem from="1579889402156" duration="17000" />
+      <workItem from="1580133028821" duration="29000" />
     </task>
     <servers />
   </component>
@@ -229,11 +232,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579283445237" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1579555378829">
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1579889414775">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="-899" y="255" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@-1366.0.1366.768" timestamp="1578003473695" />
-    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579555378829" />
+    <state x="656" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1366.0.1366.768@0.0.1920.1050" timestamp="1579889414775" />
     <state x="855" y="260" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1579283168807">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
